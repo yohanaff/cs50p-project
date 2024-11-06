@@ -74,7 +74,6 @@ Watson API response: {'usage': {'text_units': 1, 'text_characters': 31, 'feature
 Recommended song: What Makes You Beautiful by One Direction
 Thank you for using the mood-based song recommendation!
 ```
-```
 
 ## Testing
 
