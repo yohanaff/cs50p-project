@@ -70,10 +70,10 @@ Example Usage
 ```plaintext
 Describe your current mood in a sentence (or type 'quit' to exit): I am feeling happy and excited!
 Translating text to English...
-Watson API response: {'joy': 0.85, 'anger': 0.05, 'sadness': 0.1}
-Recommended song: Happy by Pharrell Williams
+Watson API response: {'usage': {'text_units': 1, 'text_characters': 31, 'features': 1}, 'language': 'en', 'emotion': {'document': {'emotion': {'sadness': 0.014556, 'joy': 0.983257, 'fear': 0.009991, 'disgust': 0.000388, 'anger': 0.002553}}}}
+Recommended song: What Makes You Beautiful by One Direction
 Thank you for using the mood-based song recommendation!
-
+```
 ```
 
 ## Testing
