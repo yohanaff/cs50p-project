@@ -97,7 +97,12 @@ def initialize_spotify_client():
 
 # Get song recommendation
 def get_song_recommendation_from_emotion(text):
-    emotions = detect_emotion(text)
+    try:
+        emotions = detect_emotion(text)
+    except Exception as e:
+        print(f"Error during emotion detection: {e}")
+        return None
+
     if emotions is None:
         print("Emotion detection failed. Please try again with a different input.")
         return None
@@ -105,12 +110,16 @@ def get_song_recommendation_from_emotion(text):
     spotify_params = emotion_to_spotify_params(emotions)
     spotify = initialize_spotify_client()
 
-    results = spotify.recommendations(
-        seed_genres=["pop"],
-        limit=1,
-        target_energy=spotify_params["target_energy"],
-        target_valence=spotify_params["target_valence"]
-    )
+    try:
+        results = spotify.recommendations(
+            seed_genres=["pop"],
+            limit=1,
+            target_energy=spotify_params["target_energy"],
+            target_valence=spotify_params["target_valence"]
+        )
+    except requests.exceptions.RequestException as e:
+        print(f"Request error occurred: {e}")
+        return None
 
     if results["tracks"]:
         track = results["tracks"][0]
