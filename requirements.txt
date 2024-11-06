@@ -1,0 +1,5 @@
+requests==2.26.0
+spotipy==2.19.0
+google-cloud-translate==3.0.2
+python-dotenv==0.19.2
+unittest2==1.1.0
