@@ -93,7 +93,7 @@ The tests cover:
 - Handling of short text and neutral/ambiguous inputs.
 - Error handling for both Watson and Google Translate API failures.
 - Exit condition upon entering "quit".
-- 
+
 ## Future Improvements
 
 - Expand emotion mapping to more diverse genres and song characteristics.
