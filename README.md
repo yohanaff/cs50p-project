@@ -98,3 +98,5 @@ The tests cover:
 - Expand emotion mapping to more diverse genres and song characteristics.
 - Enhance error handling to provide more specific feedback to users.
 - Implement a front-end interface for easier user interaction.
+
+Video Demo: https://www.youtube.com/watch?v=A3ZVqmbomJk
